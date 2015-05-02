@@ -1,0 +1,93 @@
+<html>
+  <head>
+    <style type="text/css">
+      a:link {
+      color: #<%= @email_preference.hyperlink_color%>
+      }
+      a:hover {
+      color: #<%= @email_preference.hyperlink_hover_color %>
+      }
+      a:active {
+      color: #<%= @email_preference.hyperlink_active_color %>
+      }
+      a:visited {
+      color: #<%= @email_preference.hyperlink_visited_color %>
+      }
+    </style>
+  </head>
+  <body style="background-color: #<%= @email_preference.card_background_color%>">
+    <table align="center" 
+      style="
+      width:600px;
+      background-color: #<%= @email_preference.card_face_color%>;
+      font-family: <%= @email_preference.font_family%>;
+      font-size: <%= @email_preference.body_text_size%>px;
+      color: #<%= @email_preference.body_text_color%>;
+      padding-top:0px;
+      padding-bottom:10px;
+      padding-left:0px;
+      padding-right:0px;
+      border-collapse:collapse;
+      ">
+      <tr>
+        <td style="
+          width:100%;
+          padding-top:<%= @email_preference.header_image_padding_top%>px;
+          padding-bottom:<%= @email_preference.header_image_padding_bottom%>px;
+          text-align:center;
+          background-color: #<%= @email_preference.header_background%>;
+          ">
+          <img src="<%= @email_preference.header_image_url%>" width="<%= @email_preference.header_image_width%>px" height="<%= @email_preference.header_image_height%>px" border="0">
+        </td>
+      </tr>
+           
+      <tr> 
+        <td> 
+          <hr width="580px" size="1px">
+        </td>
+      </tr>
+
+      <tr> 
+        <td valign="top" height="0" style="color:#<%= @email_preference.card_background_color%>;"> 
+          <tr>
+            <td style="
+              padding-top:10px; 
+              padding-bottom:10px;
+              padding-left:10px;
+              padding-right:10px;
+              ">
+<%= render :partial => "preview/notifiers/#{email_name}" %>
+            </td>
+                      </tr>
+                      <tr> 
+                        <td> 
+                          <hr width="580px" size="1px">
+                        </td>
+                      </tr>
+                      <tr>
+                        <td valign="top" style="
+                        background-color: #<%= @email_preference.footer_card_color%>;
+                        font-family: <%= @email_preference.font_family%>;
+                        font-size: <%= @email_preference.footer_text_size%>px;
+                        color: #<%= @email_preference.footer_text_color%>;
+                        veritcal-align:top;
+                        padding-left:10px;
+                        padding-right:10px;
+                        padding-bottom:10px;
+                        ">
+
+                          <p>You received this email because you are subscribed to <a href="${webcast_channel_url}">${webcast_channel_title}</a> on BrightTALK.
+                          <p>All times are shown in your time zone: ${user_timezone_alias}</p>
+                          <p>To update your email preferences, please visit: ${user_link_preferences}<br />
+                             Should you wish to unsubscribe from this channel please visit: ${user_link_mybrighttalk}</p>
+                          <p>For more information, please visit us at <a style="color: #227700; text-decoration: none !important" href="http://www.brighttalk.com">www.brighttalk.com</a> <br />
+                            BrightTALK™, 501 Folsom Street, 2nd Floor, San Francisco, CA 94105</p>
+                          <p>${email_unsubscribe_link}</p>
+                      
+            </td>
+          </tr>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,144 @@
+<div id="container" style="width:1500px; margin:auto" align="center">
+
+
+   <div class="header" align="left">
+        <div class="headerTop" style="padding-left:48px; padding-top:15px">
+
+            <a href="/" class="logo">
+                <img class="logoImage" src="https://www.brighttalk.com/resources/images/logo-transparent-139x25.png?v=59596105" width="139" height="25" alt="BrightTALK">
+            </a>
+            </div>
+            </div>
+
+<div style="width:250px; float:left; text-align:left">
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Header image url:</strong>
+  <%= @email_preference.header_image_url %>
+</p>
+
+<p>
+  <strong>Header background:</strong>
+  <%= @email_preference.header_background %>
+</p>
+
+<p>
+  <strong>Header image width:</strong>
+  <%= @email_preference.header_image_width %>
+</p>
+
+<p>
+  <strong>Header image height:</strong>
+  <%= @email_preference.header_image_height %>
+</p>
+
+<p>
+  <strong>Header image padding top:</strong>
+  <%= @email_preference.header_image_padding_top %>
+</p>
+
+<p>
+  <strong>Header image padding bottom:</strong>
+  <%= @email_preference.header_image_padding_bottom %>
+</p>
+
+<p>
+  <strong>Hyperlink color:</strong>
+  <%= @email_preference.hyperlink_color %>
+</p>
+
+<p>
+  <strong>Hyperlink hover color:</strong>
+  <%= @email_preference.hyperlink_hover_color %>
+</p>
+
+<p>
+  <strong>Hyperlink active color:</strong>
+  <%= @email_preference.hyperlink_active_color %>
+</p>
+
+<p>
+  <strong>Hyperlink visited color:</strong>
+  <%= @email_preference.hyperlink_visited_color %>
+</p>
+
+<p>
+  <strong>Card background color:</strong>
+  <%= @email_preference.card_background_color %>
+</p>
+
+<p>
+  <strong>Card face color:</strong>
+  <%= @email_preference.card_face_color %>
+</p>
+
+<p>
+  <strong>Body text color:</strong>
+  <%= @email_preference.body_text_color %>
+</p>
+
+<p>
+  <strong>Footer card color:</strong>
+  <%= @email_preference.footer_card_color %>
+</p>
+
+<p>
+  <strong>Footer text color:</strong>
+  <%= @email_preference.footer_text_color %>
+</p>
+
+<p>
+  <strong>Font family:</strong>
+  <%= @email_preference.font_family %>
+</p>
+
+<p>
+  <strong>Body text size:</strong>
+  <%= @email_preference.body_text_size %>
+</p>
+
+<p>
+  <strong>Footer text size:</strong>
+  <%= @email_preference.footer_text_size %>
+</p>
+
+<%= link_to 'Edit', edit_email_preference_path(@email_preference) %> |
+<%= link_to 'Back', email_preferences_path %>
+
+<br />
+<p> If you're happy with the look and feel of the email, copy each of the following text areas into your email settings</p>
+
+<p> Webcast registration confirmation </p>
+
+<textarea readonly rows=5 cols=50><%= render :partial => "preview/notifiers/headerfooter", :locals => {email_name: "registration_confirmation"} %></textarea>
+<br />
+<p> 24 hour reminder email </p>
+<textarea readonly rows=5 cols=50><%= render :partial => "preview/notifiers/headerfooter", :locals => {email_name: "twentyfour_hour_reminder"} %></textarea>
+<br />
+<p> Starting now email </p>
+<textarea readonly rows=5 cols=50><%= render :partial => "preview/notifiers/headerfooter", :locals => {email_name: "starting_now"} %></textarea>
+<br />
+<p> Recorded webcast now available </p>
+<textarea readonly rows=5 cols=50><%= render :partial => "preview/notifiers/headerfooter", :locals => {email_name: "missed_you"} %></textarea>
+<br />
+<p> Viewer follow up email </p>
+<textarea readonly rows=5 cols=50><%= render :partial => "preview/notifiers/headerfooter", :locals => {email_name: "follow_up"} %></textarea>
+<br />
+<p> Webcast cancelled </p>
+<textarea readonly rows=5 cols=50><%= render :partial => "preview/notifiers/headerfooter", :locals => {email_name: "canceled"} %></textarea>
+<br />
+<p> Webcast rescheduled </p>
+<textarea readonly rows=5 cols=50><%= render :partial => "preview/notifiers/headerfooter", :locals => {email_name: "rescheduled"} %></textarea>
+<br />
+<p> Webcast re-run </p>
+<textarea readonly rows=5 cols=50><%= render :partial => "preview/notifiers/headerfooter", :locals => {email_name: "rerun"} %></textarea> 
+
+</div>
+
+  <p> This is an example of your Registration Confirmation email, all emails will follow this style, with different body text  </p>
+
+<iframe style="width: 800px; height: 600px" src="/preview/email"></iframe>
+
+

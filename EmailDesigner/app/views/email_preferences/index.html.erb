@@ -1,0 +1,61 @@
+<h1>Listing email_preferences</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Header image url</th>
+      <th>Header background</th>
+      <th>Header image width</th>
+      <th>Header image height</th>
+      <th>Header imgage padding top</th>
+      <th>Header image padding bottom</th>
+      <th>Hyperlink color</th>
+      <th>Hyperlink hover color</th>
+      <th>Hyperlink active color</th>
+      <th>Hyperlink visited color</th>
+      <th>Card background color</th>
+      <th>Card face color</th>
+      <th>Font family</th>
+      <th>Body text color</th>
+      <th>Body text size</th>
+      <th>Footer card color</th>
+      <th>Footer text color</th>
+      <th>Footer text size</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @email_preferences.each do |email_preference| %>
+      <tr>
+        <td><%= email_preference.header_image_url %></td>
+        <td><%= email_preference.header_background %></td>
+        <td><%= email_preference.header_image_width %></td>
+        <td><%= email_preference.header_image_height %></td>
+        <td><%= email_preference.header_image_padding_top %></td>
+        <td><%= email_preference.header_image_padding_bottom %></td>
+        <td><%= email_preference.hyperlink_color %></td>
+        <td><%= email_preference.hyperlink_hover_color %></td>
+        <td><%= email_preference.hyperlink_active_color %></td>
+        <td><%= email_preference.hyperlink_visited_color %></td>
+        <td><%= email_preference.card_background_color %></td>
+        <td><%= email_preference.card_face_color %></td>
+        <td><%= email_preference.font_family %></td>
+        <td><%= email_preference.body_text_color %></td>
+        <td><%= email_preference.body_text_size %></td>
+        <td><%= email_preference.footer_card_color %></td>
+        <td><%= email_preference.footer_text_color %></td>
+        <td><%= email_preference.footer_text_size %></td>
+        <td><%= link_to 'Show', email_preference %></td>
+        <td><%= link_to 'Edit', edit_email_preference_path(email_preference) %></td>
+        <td><%= link_to 'Destroy', email_preference, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Email preference', new_email_preference_path %>

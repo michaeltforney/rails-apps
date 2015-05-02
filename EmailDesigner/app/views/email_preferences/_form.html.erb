@@ -1,0 +1,89 @@
+<%= form_for(@email_preference) do |f| %>
+  <% if @email_preference.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@email_preference.errors.count, "error") %> prohibited this email_preference from being saved:</h2>
+
+      <ul>
+      <% @email_preference.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :header_image_url %><br>
+    <%= f.text_area :header_image_url %>
+  </div>
+  <div class="field">
+    <%= f.label :header_background %><br>
+    <%= f.text_field :header_background%>
+  </div>
+  <div class="field">
+    <%= f.label :header_image_width %><br>
+    <%= f.text_field :header_image_width%>
+  </div>
+  <div class="field">
+    <%= f.label :header_image_height %><br>
+    <%= f.text_field :header_image_height%>
+  </div>
+    <div class="field">
+    <%= f.label :header_image_padding_top %><br>
+    <%= f.text_field :header_image_padding_top%>
+  </div>
+    <div class="field">
+    <%= f.label :header_image_padding_bottom %><br>
+    <%= f.text_field :header_image_padding_bottom%>
+  </div>
+  <div class="field">
+    <%= f.label :hyperlink_color %><br>
+    <%= f.text_field :hyperlink_color %>
+  </div>
+  <div class="field">
+    <%= f.label :hyperlink_hover_color %><br>
+    <%= f.text_field :hyperlink_hover_color %>
+  </div>
+  <div class="field">
+    <%= f.label :hyperlink_active_color %><br>
+    <%= f.text_field :hyperlink_active_color %>
+  </div>
+  <div class="field">
+    <%= f.label :hyperlink_visited_color %><br>
+    <%= f.text_field :hyperlink_visited_color %>
+  </div>
+  <div class="field">
+    <%= f.label :card_background_color %><br>
+    <%= f.text_field :card_background_color %>
+  </div>
+  <div class="field">
+    <%= f.label :card_face_color %><br>
+    <%= f.text_field :card_face_color %>
+  </div>
+  <div class="field">
+    <%= f.label :font_family %><br>
+    <%= f.text_field :font_family %>
+  </div>
+  <div class="field">
+    <%= f.label :body_text_color %><br>
+    <%= f.text_field :body_text_color %>
+  </div>
+  <div class="field">
+    <%= f.label :body_text_size %><br>
+    <%= f.text_field :body_text_size %>
+  </div>
+  <div class="field">
+    <%= f.label :footer_card_color %><br>
+    <%= f.text_field :footer_card_color %>
+  </div>
+  <div class="field">
+    <%= f.label :footer_text_color %><br>
+    <%= f.text_field :footer_text_color %>
+  </div>
+  <div class="field">
+    <%= f.label :footer_text_size %><br>
+    <%= f.text_field :footer_text_size %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
